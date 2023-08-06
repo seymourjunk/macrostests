@@ -42,3 +42,7 @@ TEST_F(SpaceTestFixture, LaunchProgramNegative_ProgramNotExist) {
     program.cmd_ = program.path_;
     EXPECT_EQ(mcrs::LaunchProgram(program), false);
 }
+
+TEST_F(SpaceTestFixture, CloseProgram_ProgramExist) {
+    EXPECT_EQ(mcrs::CloseProgram(program), true);
+}
